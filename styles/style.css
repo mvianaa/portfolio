@@ -1,0 +1,155 @@
+body{
+    background-color: #282828;
+    color: #fff;
+    margin: 0 auto; /*Para o auto funcionar o body precisa ter uma largura*/
+    max-width: 1120px; /*largura máxima do body*/
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+header .logo{
+    width: 17rem;
+    height: auto; /*Dessa forma a altura vai se ajustar de acordo com a largura*/
+    transition: 0.2s;
+}
+
+/*Arrumar essa parte kkkk*/
+header a:hover .logo{
+    color: red;
+    border: 2px solid red;
+}
+
+/*Arrumar aqui tbm sksksk*/
+header .menu li a{
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    transition: 0.5s;
+}
+
+header .menu li a:hover{
+    background-color: aqua;
+    color: #fff;
+    border-radius: 50px;
+}
+
+.apresentacao{
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 90px); /*calc é uma função que utilizamos para calcular. Neste caso quero que a altura minima da minha classe ocupe a tela inteira, porém o header estava atrapalhando e acabou ultrapassando um pouco a tela, por isso usei o calc e subtrai o valor da altura do header*/
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.apresentacao .sobre_mim{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    letter-spacing: 2px; /*Espaçamento entre as letras*/
+    padding: 0 15px;
+    max-width: 50%;
+}
+
+.apresentacao .titulo_apresentacao{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.apresentacao ul{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.apresentacao .sobre_mim p{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.apresentacao .redes_sociais{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+.apresentacao .redes_sociais a i{
+    border: 1px solid;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    text-align: center;
+    font-size: 26px;
+    transition: 0.5s;
+}
+
+.apresentacao .redes_sociais a i:hover{
+    color: #9443d0;
+    border: 1px solid #9443d0;
+    transform: scale(1.1); /*Função que serve para escalar (aumentar) o elemento*/
+}
+
+.apresentacao .imagem_apresentacao .foto{
+    max-width: 450px;
+    border-radius: 50%;
+}
+
+.apresentacao .imagem_apresentacao .foto img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.apresentacao .foto.sombra_interna{ /*.foto.sombra está sem espaço pois sombra_interna não está dentro da classe foto*/
+    background: linear-gradient(to right, #8A35C8, #18C063, #00EEA2);
+}
+
+.projetos{
+    padding: 70px 0;
+}
+
+.projetos .titulo_projetos{
+    text-align: center;
+    padding: 60px 0;
+    font-size: 45px;
+    text-transform: uppercase;
+}
+
+.projetos .container_projetos{
+    background-color: yellowgreen;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /*Pega a largura definida e tenta encaixar os elementos nela, caso não caiba ele quebra a linha e joga para baixo*/
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.projetos .projeto{
+    max-width: 260px;
+    max-height: 500px;
+    position: relative;
+    display: none;
+}
+
+.projetos .projeto.ativo{
+    display: block;
+}
+
+.projetos .projeto img{
+    height: 100%;
+}
+
+.projetos .projeto h3{
+    background-color: #040203;
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: absolute;
+    bottom: 0;
+}
