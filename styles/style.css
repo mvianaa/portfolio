@@ -1,5 +1,10 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    background-color: #282828;
+    background-color: #000000;
+    background-image: linear-gradient(160deg, #000000 1%, #3b3e3e 51%);
     color: #fff;
     margin: 0 auto; /*Para o auto funcionar o body precisa ter uma largura*/
     max-width: 1120px; /*largura máxima do body*/
@@ -13,15 +18,15 @@ header{
 }
 
 header .logo{
-    width: 17rem;
+    width: 10rem;
     height: auto; /*Dessa forma a altura vai se ajustar de acordo com a largura*/
     transition: 0.2s;
+    border-radius: 50%;
 }
 
 /*Arrumar essa parte kkkk*/
 header a:hover .logo{
-    color: red;
-    border: 2px solid red;
+    background-color: rgba(0, 255, 255, 0.537);
 }
 
 /*Arrumar aqui tbm sksksk*/
@@ -33,7 +38,7 @@ header .menu li a{
 }
 
 header .menu li a:hover{
-    background-color: aqua;
+    background-color: rgba(0, 255, 255, 0.537);
     color: #fff;
     border-radius: 50px;
 }
@@ -90,8 +95,8 @@ header .menu li a:hover{
 }
 
 .apresentacao .redes_sociais a i:hover{
-    color: #9443d0;
-    border: 1px solid #9443d0;
+    color: aqua;
+    border: 1px solid aqua;
     transform: scale(1.1); /*Função que serve para escalar (aumentar) o elemento*/
 }
 
@@ -121,7 +126,6 @@ header .menu li a:hover{
 }
 
 .projetos .container_projetos{
-    background-color: yellowgreen;
     display: flex;
     gap: 20px;
     flex-wrap: wrap; /*Pega a largura definida e tenta encaixar os elementos nela, caso não caiba ele quebra a linha e joga para baixo*/
@@ -145,11 +149,56 @@ header .menu li a:hover{
 }
 
 .projetos .projeto h3{
+  background-color: #040203;
+  width: calc(100% - 20px);
+  padding-left: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.projetos .projeto .informacoes_projeto{
     background-color: #040203;
-    width: 100%;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
     position: absolute;
-    bottom: 0;
+    top: 0;
+    width: calc(100% - 38px);
+    height: calc(100% - 38px);
+    opacity: 0;
+    transition: 0.3s;
+    padding: 20px;
+}
+
+.projetos .projeto .informacoes_projeto:hover{
+    opacity: 0.7;
+    background-color: #000;
+}
+
+.informacoes_projeto p{
+    font-size: 1.2rem;
+    padding-bottom: 5px;
+}
+
+.projetos .btn_mostrar_projetos{
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    color: #fff;
+    width: 180px;
+    padding: 20px;
+    font-size: 18px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.projetos .btn_mostrar_projetos:hover{
+    background-color: aqua;
+    transition: 0.8s;
+}
+
+.projetos .btn_mostrar_projetos.remover{
+    display: none;
 }
