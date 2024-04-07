@@ -20,13 +20,6 @@ header{
 header .logo{
     width: 10rem;
     height: auto; /*Dessa forma a altura vai se ajustar de acordo com a largura*/
-    transition: 0.2s;
-    border-radius: 50%;
-}
-
-/*Arrumar essa parte kkkk*/
-header a:hover .logo{
-    background-color: rgba(0, 255, 255, 0.537);
 }
 
 /*Arrumar aqui tbm sksksk*/
@@ -102,16 +95,19 @@ header .menu li a:hover{
 
 .apresentacao .imagem_apresentacao .foto{
     max-width: 450px;
+    max-height: 450px;
     border-radius: 50%;
+    overflow: hidden;/*Permite que a imagem seja cortada de acordo com o cículo*/ 
 }
 
 .apresentacao .imagem_apresentacao .foto img{
     width: 100%;
-    border-radius: 50%;
 }
 
 .apresentacao .foto.sombra_interna{ /*.foto.sombra está sem espaço pois sombra_interna não está dentro da classe foto*/
-    background: linear-gradient(to right, #8A35C8, #18C063, #00EEA2);
+    background-color: #0f2299;
+    background-image: linear-gradient(43deg, #0f2299 0%, #4e51c4 46%, #4ed4e1 100%);
+
 }
 
 .projetos{
